@@ -1,0 +1,371 @@
+:root {
+  --pri:#F2F2F2;
+  --sec:#EAE4D5;
+  --tri1:#B6B09F;
+  --tri2:#000000;
+  --brown:#f57417;
+  --gray:#393E46;
+}
+
+@font-face {
+  font-family: light;
+  src: url(./Aeonik-Light.otf);
+}
+@font-face {
+  font-family: medium;
+  src: url(./Aeonik-Medium.otf);
+}
+@font-face {
+  font-family: bold;
+  src: url(./Aeonik-Bold.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: var(--tri1);
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--gra);
+}
+#main nav {
+  height: 10%;
+  background-color: var(--tri1);
+}
+#main .view1 {
+  padding: 2%;
+  width: 100%;
+  position: absolute;
+}
+#main .view1 .ipage {
+  color: white;
+  background-image: url(./ipage1.jpg);
+  background-position: -15px 1380px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 40px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 20px;
+  height: 300px;
+  justify-content: flex-start;
+}
+#main .view1 .ipage .head1 {
+  margin-top: 50px;
+  height: -moz-max-content;
+  height: max-content;
+}
+#main .view1 .ipage .head1 .date {
+  font-size: larger;
+  margin-top: -65px;
+  margin-bottom: 30px;
+}
+#main .view1 .ipage .head1 .time {
+  font-size: 70px;
+}
+#main .view1 .ipage .head1 .location {
+  font-size: 50px;
+}
+#main .view1 .allfeatures {
+  padding: 2%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  flex-wrap: wrap;
+  transition: ease-in-out 0.5s;
+  position: absolute;
+}
+#main .view1 .card {
+  height: 250px;
+  width: 180px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+#main .view1 .card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#main .view1 .card h2 {
+  position: absolute;
+  margin-top: -15%;
+  font-weight: 600;
+  right: 5%;
+  color: var(--pri);
+  font-size: medium;
+}
+
+.card:active {
+  scale: 0.98;
+}
+
+.fullelem {
+  padding: 40px;
+  font-size: xx-large;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  background-color: var(--tri2);
+  display: none;
+  position: absolute;
+}
+
+.back:active {
+  scale: 0.97;
+}
+
+.back {
+  background-color: var(--pri);
+  right: 5%;
+  position: absolute;
+  padding: 10px 20px;
+  font-size: medium;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 5 25 --tri2;
+}
+
+.To-do {
+  color: var(--tri2);
+  background-color: var(--sec);
+  padding: 5%;
+}
+.To-do .container {
+  margin-top: 5%;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  gap: 2%;
+}
+.To-do .container .left {
+  background-color: var(--tri1);
+  border-radius: 10px;
+  height: 100%;
+  width: 33%;
+}
+.To-do .container .left form {
+  margin-top: 2%;
+  color: var(--pri);
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.To-do .container .left form #label {
+  font-size: small;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.To-do .container .left form input#task {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--brown);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: var(--pri);
+}
+.To-do .container .left form textarea {
+  width: 100%;
+  min-height: 50%;
+  background-color: var(--brown);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: var(--pri);
+}
+.To-do .container .left form button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--sec);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: var(--tri2);
+}
+.To-do .container .left form #sub:active {
+  scale: 0.95;
+}
+.To-do .container .right {
+  border-radius: 10px;
+  background-color: var(--tri1);
+  height: 100%;
+  width: 67%;
+  padding: 10px;
+  overflow: auto;
+}
+.To-do .container .right .task {
+  margin-bottom: 2%;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  background-color: var(--brown);
+  border-radius: 5px;
+}
+.To-do .container .right .task h5 {
+  color: white;
+  font-weight: bold;
+}
+.To-do .container .right .task h5 span {
+  color: red;
+  font-size: small;
+  opacity: 0;
+}
+.To-do .container .right .task h5 span.true {
+  opacity: 1;
+}
+.To-do .container .right .task button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--sec);
+}
+
+.dailyplanner {
+  background-color: var(--tri1);
+}
+.dailyplanner .container-dp {
+  overflow: auto;
+  padding: 20px;
+  margin-top: 20px;
+  height: 80%;
+  background-color: var(--sec);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.dailyplanner .container-dp .plannertime {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 49%;
+  margin-bottom: 10px;
+}
+.dailyplanner .container-dp .plannertime p {
+  font-size: x-small;
+  position: absolute;
+  top: 5%;
+  left: 1%;
+}
+.dailyplanner .container-dp .plannertime input {
+  background-color: var(--brown);
+  border: none;
+  border-radius: 10px;
+  padding: 20px 40px;
+  width: 100%;
+  outline: none;
+  font-weight: 500;
+  padding-top: 30px;
+}
+
+.motivational .container-moti {
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.motivational .container-moti .content {
+  padding: 20px;
+  width: 100%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+  box-shadow: 0px 0px 383px 74px rgb(245, 248, 250);
+  -webkit-box-shadow: 0px 0px 383px 74px rgba(222, 236, 242, 0.59);
+  -moz-box-shadow: 0px 0px 383px 74px rgb(231, 236, 239);
+}
+.motivational .container-moti .content .moti1 {
+  padding: 10px;
+  background-color: var(--pri);
+  border-radius: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.motivational .container-moti .content .moti1 img {
+  position: absolute;
+  right: 5%;
+  top: 3%;
+  opacity: 0.67;
+}
+.motivational .container-moti .content .moti2 {
+  color: #8b4513;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 20px;
+}
+.motivational .container-moti .content .moti3 {
+  font-size: small;
+  color: aliceblue;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: right;
+  position: relative;
+}
+
+.pomodoro {
+  background-color: var(--tri1);
+}
+.pomodoro .mainpomo .pomo {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  background-color: var(--pri);
+  padding: 10px;
+  border-radius: 20px;
+  color: var(--tri2);
+}
+.pomodoro .mainpomo .pomo1 {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 4rem;
+}
+.pomodoro .mainpomo .pomo1 h1 {
+  font-size: 15rem;
+}
+.pomodoro .mainpomo .pomo1 #copy {
+  position: absolute;
+  color: black;
+  top: 1%;
+  right: -1%;
+}
+.pomodoro .mainpomo .pomo1 button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--pri);
+  box-shadow: 5px 5px 0px black;
+}
+.pomodoro .mainpomo .pomo1 #bpomo:active {
+  transform: scale(0.95);
+}/*# sourceMappingURL=style.css.map */
